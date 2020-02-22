@@ -1,9 +1,9 @@
-Ansible-role-backup-ale
+Ansible Role for backup AOS OmniSwitch config
 =========
 
 ALE OmniSwitch config backup via ansible playbook
 
-Support
+Supported platforms
 ------------
 * Standalone
 * Stack
