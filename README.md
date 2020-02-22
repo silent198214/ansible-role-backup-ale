@@ -73,7 +73,7 @@ Example Playbook
   tags: ale
 
   roles:
-    - backup-ale
+    - ansible-role-backup-ale
 ```
 
 
