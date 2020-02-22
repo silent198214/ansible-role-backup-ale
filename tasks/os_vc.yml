@@ -1,0 +1,11 @@
+---
+- name: backup ale vc config to local file
+  shell: scp -P {{ device_port }} -o {{ ssh_option }} {{ device_user }}@{{ ansible_host }}:/flash/certified/vcboot.cfg {{ backup_local_path }}/{{ backup_vc_filename }}
+
+- name: copy backup file to backup server
+  shell: ncftpput -m backupftp {{ backup_srv_path }} {{ role_path }}/files/{{ backup_vc_filename }}
+
+- name: delete local backup file
+  file:
+    path: "{{ backup_local_path }}/{{ backup_vc_filename }}"
+    state: absent
